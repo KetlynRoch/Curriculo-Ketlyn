@@ -131,7 +131,7 @@ h1 {
   background-color: #000;
   opacity: 1;
   z-index: 9999;
-  transition: opacity 1.5s ease;
+  transition: opacity 2.5s ease;
 }
 
 .overlay.fade-out {
@@ -152,7 +152,7 @@ h1 {
 
 .quadrado {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(134, 125, 125, 0.938);
   animation: mover 10s linear infinite;
   border-radius: 4px;
 }
@@ -171,14 +171,22 @@ h1 {
 .content-section, .full-screen.hero {
   scroll-margin-top: 70px; /* ajuste conforme a altura do seu menu */
 }
-/* Ajustes para dispositivos com largura máxima de 600px (celulares) */
-@media (max-width: 600px) {
-  .digitando {
-    font-size: 16px;          /* Fonte um pouco menor */
-    max-width: 90vw;          /* Limita a largura para não cortar */
-    white-space: pre-wrap;    /* Permite que o texto quebre linha */
-    word-wrap: break-word;    /* Quebra palavras longas */
-  }
+
+
+.digitando {
+  font-family: monospace;
+  font-size: clamp(14px, 4vw, 20px); /* mínimo 14px, ideal 4vw, máximo 20px */
+  color: #ffccd5;
+  border-right: 2px solid #ff6f8e;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  margin-top: 10px;
+  max-width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
   
   h1 {
     font-size: 28px;          /* Título menor pra caber melhor */
@@ -193,6 +201,3 @@ h1 {
     gap: 15px;                /* Espaçamento menor no menu */
     padding: 12px 0;
   }
-
-  /* Qualquer outro ajuste que precisar no layout para celular */
-}
