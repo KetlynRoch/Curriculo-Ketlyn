@@ -171,3 +171,28 @@ h1 {
 .content-section, .full-screen.hero {
   scroll-margin-top: 70px; /* ajuste conforme a altura do seu menu */
 }
+/* Ajustes para dispositivos com largura máxima de 600px (celulares) */
+@media (max-width: 600px) {
+  .digitando {
+    font-size: 16px;          /* Fonte um pouco menor */
+    max-width: 90vw;          /* Limita a largura para não cortar */
+    white-space: pre-wrap;    /* Permite que o texto quebre linha */
+    word-wrap: break-word;    /* Quebra palavras longas */
+  }
+  
+  h1 {
+    font-size: 28px;          /* Título menor pra caber melhor */
+  }
+  
+  .foto-perfil {
+    width: 180px;             /* Foto menor pra caber */
+    height: 180px;
+  }
+  
+  .menu {
+    gap: 15px;                /* Espaçamento menor no menu */
+    padding: 12px 0;
+  }
+
+  /* Qualquer outro ajuste que precisar no layout para celular */
+}
